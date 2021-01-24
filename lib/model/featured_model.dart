@@ -13,9 +13,3 @@ class FeaturedModel {
         this.tags});
 }
 
-var featuredModelList = [FeaturedModel(
-    imageCount: 25,
-    images: ["google.com"],
-    category: "Sunny beach",
-    description: "Curated by landscap",
-    tags: ["Wave", "Sea", "Wallpaper"])];
