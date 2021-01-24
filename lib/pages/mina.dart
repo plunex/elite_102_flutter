@@ -1,12 +1,13 @@
 import 'dart:math';
 
-import 'package:elite/pages/widgets/category_tag.dart';
+import 'package:elite/pages/widgets/category_tag_widget.dart';
 import 'package:elite/pages/widgets/size_config.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Mina extends StatelessWidget {
-  List categories = ['Plants', 'Animals', 'Food', 'Scape', 'Leaves'];
+  List<String> categories = ['Plants', 'Animals', 'Food', 'Scape', 'Leaves'];
+
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
@@ -69,34 +70,35 @@ class Mina extends StatelessWidget {
                             ),
                           ),
                           Container(height: 5),
-                          Row(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(right: 8.0),
-                                child: CategoryTag(
-                                  categories: categories,
-                                  text: categories[
-                                      Random().nextInt(categories.length)],
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(right: 8.0),
-                                child: CategoryTag(
-                                  categories: categories,
-                                  text: categories[
-                                      Random().nextInt(categories.length)],
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(right: 8.0),
-                                child: CategoryTag(
-                                  categories: categories,
-                                  text: categories[
-                                      Random().nextInt(categories.length)],
-                                ),
-                              ),
-                            ],
-                          ),
+                          CategoryTagWidget(
+                            tags: categories,
+                            minTagsCount: 3,
+                          )
+                          // Row(
+                          //   children: [
+                          //     Padding(
+                          //       padding: const EdgeInsets.only(right: 8.0),
+                          //       child: CategoryTagWidget(
+                          //         tags: categories,
+                          //       ),
+                          //     ),
+                          //     Padding(
+                          //       padding: const EdgeInsets.only(right: 8.0),
+                          //       child: CategoryTagWidget(
+                          //         text: categories[
+                          //         Random().nextInt(categories.length)],
+                          //       ),
+                          //     ),
+                          //     Padding(
+                          //       padding: const EdgeInsets.only(right: 8.0),
+                          //       child: CategoryTagWidget(
+                          //         text: categories[
+                          //         Random().nextInt(categories.length)],
+                          //       ),
+                          //     ),
+                          //   ],
+                          // ),
+                          ,
                           Container(height: 40),
                         ],
                       ),
