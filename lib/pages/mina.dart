@@ -6,7 +6,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Mina extends StatelessWidget {
-  List<String> categories = ['Plants', 'Animals', 'Food', 'Scape', 'Leaves'];
+  // List<String> categories = ['Plants', 'Animals', 'Food', 'Scape', 'Leaves'];
+  List<String> categories = [
+    'Girls',
+    'Black',
+    'Hair',
+    'Model',
+    'Fashion',
+    'HD'
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +61,7 @@ class Mina extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30),
               child: ListView.builder(
-                itemCount: 6,
+                itemCount: 8,
                 itemBuilder: (context, index) {
                   return Stack(
                     children: [

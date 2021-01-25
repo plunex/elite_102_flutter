@@ -5,11 +5,11 @@ class FeaturedModel {
   String description;
   List<String> tags;
 
-  FeaturedModel(
-      {this.imageCount,
-        this.images,
-        this.category,
-        this.description,
-        this.tags});
+  FeaturedModel({
+    this.imageCount,
+    this.images,
+    this.category,
+    this.description,
+    this.tags,
+  });
 }
-
