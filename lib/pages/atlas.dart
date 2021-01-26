@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:elite/model/featured_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -8,33 +10,56 @@ import 'widgets/size_config.dart';
 class Atlas extends StatelessWidget {
   final featuredModelList = [
     FeaturedModel(
-        imageCount: 25,
-        images: ["google.com"],
-        category: "Sunny beach",
-        description: "Curated by landscape",
-        tags: ["Wave", "Sea", "Wallpaper"]),
+      imageCount: 3,
+      images: [
+        "images/girl${Random().nextInt(9)}.jpeg",
+        // "images/girl${Random().nextInt(9)}.jpeg",
+        // "images/girl${Random().nextInt(9)}.jpeg",
+      ],
+      category: "Sunny beach",
+      description: "Curated by landscape",
+      tags: ["Wave", "Sea", "Wallpaper"],
+    ),
     FeaturedModel(
-        imageCount: 25,
-        images: ["google.com"],
-        category: "Sunny beach",
-        description: "Curated by Leesie Ardrey",
-        tags: ["Growth", "Flower", "Bloosom"])
+      imageCount: 2,
+      images: [
+        "images/girl${Random().nextInt(9)}.jpeg",
+        "images/girl${Random().nextInt(9)}.jpeg",
+        // "images/girl${Random().nextInt(9)}.jpeg",
+      ],
+      category: "Sunny beach",
+      description: "Curated by Leesie Ardrey",
+      tags: ["Growth", "Flower", "Bloosom"],
+    ),
+    FeaturedModel(
+      imageCount: 3,
+      images: [
+        "images/girl${Random().nextInt(9)}.jpeg",
+        "images/girl${Random().nextInt(9)}.jpeg",
+        "images/girl${Random().nextInt(9)}.jpeg",
+      ],
+      category: "Sunny beach",
+      description: "Curated by Leesie Ardrey",
+      tags: ["Growth", "Flower", "Bloosom"],
+    ),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar(context),
-      body: ListView.builder(
-        shrinkWrap: true,
-        itemCount: featuredModelList.length,
-        itemBuilder: (context, index) {
-          return FeaturedWidget(
-            featuredModel: featuredModelList[index],
-          );
-        },
-      )
-    );
+        appBar: buildAppBar(context),
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+          child: ListView.builder(
+            shrinkWrap: true,
+            itemCount: featuredModelList.length,
+            itemBuilder: (context, index) {
+              return FeaturedWidget(
+                featuredModel: featuredModelList[index],
+              );
+            },
+          ),
+        ));
   }
 }
 

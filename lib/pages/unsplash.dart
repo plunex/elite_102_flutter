@@ -34,7 +34,6 @@ class Unsplash extends StatelessWidget {
                 crossAxisCount: 4,
                 itemCount: 8,
                 itemBuilder: (BuildContext context, int index) => Stack(
-                  // fit: StackFit.passthrough,
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
