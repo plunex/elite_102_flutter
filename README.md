@@ -19,6 +19,7 @@ Image browsing UI.
 | ------------- | ------------- |
 | <img src="screenshots/unsplash1.png" width="300"/> | <img src="screenshots/unsplash2.png" width="300"/> |
 | <img src="screenshots/mina1.png" width="300"/> | <img src="screenshots/mina2.png" width="300"/> |
+| <img src="screenshots/atlas1.png" width="300"/> | <img src="screenshots/atlas2.png" width="300"/> |
 
 
 ## 🤓 Author(s)
